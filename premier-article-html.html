@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- TITRE DE LA PAGE-->
+    <title>Découverte du HTML et du CSS</title>
+
+    <!-- MOBILE RESPONSIVE META -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta name="description" content="Blog de Seb" />
+    <meta name="author" content="Seb" />
+
+    <!-- PLUGINS : BOOTSTRAP, SLIDER, ICONS -->
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bbck.woff2"
+      style="font-display: optional"
+    />
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:600%7cOpen&#43;Sans&amp;display=swap"
+      media="screen"
+    />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+
+    <!-- CSS PERSO -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- navigation -->
+    <header class="sticky-top bg-white border-bottom border-default">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-white">
+          <a class="navbar-brand" href="index.html">
+            <img
+              class="img-fluid"
+              width="150px"
+              src="images/logo-simplifie-xs.png"
+              alt="LogBook"
+            />
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navigation"
+          >
+            <i class="ti-menu"></i>
+          </button>
+
+          <div class="collapse navbar-collapse text-center" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">À propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Articles <i class="ti-angle-down ml-1"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="premier-article-html.html"
+                    >HTML/CSS</a
+                  >
+                  <a class="dropdown-item" href="second-article-bootstrap.html"
+                    >Bootstrap</a
+                  >
+                  <a class="dropdown-item" href="post-elements.html"
+                    >Post Elements</a
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <!-- search -->
+            <div class="search px-4">
+              <button id="searchOpen" class="search-btn">
+                <i class="ti-search"></i>
+              </button>
+              <div class="search-wrapper">
+                <form action="javascript:void(0)" class="h-100">
+                  <input
+                    class="search-box pl-4"
+                    id="search-query"
+                    name="s"
+                    type="search"
+                    placeholder="Type &amp; Hit Enter..."
+                  />
+                </form>
+                <button id="searchClose" class="search-close">
+                  <i class="ti-close text-dark"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- /navigation -->
+
+    <section class="section">
+      <div class="container">
+        <article class="row mb-4">
+          <div class="col-lg-10 mx-auto mb-4">
+            <!-- TITRE -->
+            <h1 class="h2 mb-3">Découverte des langages HTML & CSS</h1>
+            <!-- META DONNEES -->
+            <ul class="list-inline post-meta mb-3">
+              <li class="list-inline-item">
+                <i class="ti-user mr-2"></i><b>Seb</b>
+              </li>
+              <li class="list-inline-item">Date : <b>8 juin 2023</b></li>
+            </ul>
+          </div>
+          <!-- IMAGE -->
+          <div class="col-12 mb-3">
+            <div class="post-slider">
+              <img src="images/post/code-c.jpg" class="img-fluid" alt="Code" />
+              <img src="images/post/code-b.jpg" class="img-fluid" alt="Code" />
+            </div>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <div class="content">
+              <h4 class="pt-2">
+                HTML et CSS à travers CodePen et Visual Studio Code
+              </h4>
+              <!-- TEXTE -->
+              <p>
+                <a href="https://codepen.io/" target="_blank">Codepen.io</a> est
+                un <b>éditeur de code</b> en ligne nous permettant de tester
+                rapidement tous les fragments de code qui vont nous faire
+                découvrir le balisage HTML. Avec une interface simple, le site
+                vous permet d’écrire du code HTML, CSS, et Javascript et de
+                simuler la page que les codes sont censés créer.
+              </p>
+              <p>
+                Le premier langage étudié est le <b>HTML</b> (<em
+                  >HyperText Markup Language</em
+                >). C’est un langage qui permet de structurer des pages web. On
+                parle de langage de balisage et non de langage de programmation,
+                car le but du HTML est d’encadrer les différents éléments
+                présents dans une page (images, titres, paragraphes ...) par des
+                balises.
+              </p>
+              <!-- BALISES CODE POUR DES EXEMPLES DE CODE  -->
+              <h5 id="code-and-syntax-highlighting" class="mb-3">
+                Exemple de code HTML
+              </h5>
+              <p>
+                Le <code>code</code> ci-dessous crée une balise
+                <code>&lt;p&gt;</code> qui définit un paragraphe auquel on
+                applique une classe CSS.
+              </p>
+              <div class="highlight">
+                <pre
+                  style="
+                    color: #f8f8f2;
+                    background-color: #272822;
+                    -moz-tab-size: 4;
+                    -o-tab-size: 4;
+                    tab-size: 4;
+                  "
+                ><code class="language-html" data-lang="html"><span style="color:#66d9ef">&lt;p</span> <span style="color:#a6e22e">class="ma_class"</span><span style="color:#66d9ef">&gt;</span><span style="color:#ffffff">&#34;Ceci est un texte&#34;</span><span style="color:#66d9ef">&lt;/p&gt;</span></code></pre>
+              </div>
+              <p>
+                Le langage CSS (pour <em>Cascading Style Sheets</em> - feuille
+                de style en cascade en VF) est un langage de feuille de styles.
+                Il permet d'apporter du design au contenu HTML intégré. CSS est
+                capable de changer tous les aspects du design d'une page web
+                comme les couleurs, le positionnement ou les polices de
+                caractère et il permet également de créer des animations, de
+                petits effets simples de survol ou d'interaction et bien
+                beaucoup d'autres choses.
+              </p>
+              <!-- BALISES CODE POUR DES EXEMPLES DE CODE  -->
+              <h5 id="code-and-syntax-highlighting" class="mb-3">
+                Exemple de code CSS
+              </h5>
+              <p>
+                Le code CSS suivant ajoute une <code>couleur de fond</code> et
+                de la <code>marge extérieure</code> à la classe
+                <em>ma_class</em>. En CSS, une classe est un sélecteur qui
+                permet de cibler des éléments d'un document HTML en fonction du
+                contenu de l'attribut class de chaque élément (comme ci-dessus,
+                la balise &lt;/p&gt; a pour class <em>ma_class</em>).
+              </p>
+              <div class="highlight">
+                <pre
+                  style="
+                    color: #f8f8f2;
+                    background-color: #272822;
+                    -moz-tab-size: 4;
+                    -o-tab-size: 4;
+                    tab-size: 4;
+                  "
+                ><code class="language-css" data-lang="css"><span style="color:#66d9ef">.ma_class {</span> <br><span style="color:#a6e22e">background-color:</span> <span style="color:#e6db74">#a6e22e;</span><br><span style="color:#a6e22e">margin: </span><span style="color:#e6db74">10px;</span><br><span style="color:#66d9ef">}</span></code></pre>
+              </div>
+
+              <p class="mt-4">
+                Visual Studio Code est un éditeur de code distribué par
+                Microsoft. C'est l'éditeur de code le plus utilisé au monde. Il
+                permet de créer des fichiers de code en local sur son PC et de
+                structurer l'arborescence de ses dossiers web. Il permet aussi
+                grâce à une extension de simuler un serveur web et d'afficher le
+                résultat de notre code sur un navigateur.
+              </p>
+              <div class="col-12 my-3 p-0">
+                <img
+                  src="images/post/vscode.jpg"
+                  class="img-fluid"
+                  alt="VS Code"
+                />
+              </div>
+              <!-- TIP -->
+              <div class="notices tip">
+                <p>
+                  Les langages HTML et CSS nécessitent de respecter une syntaxe
+                  bien précise sous peine de connaître des problèmes
+                  d'affichage.
+                </p>
+              </div>
+              <h5 class="mb-3">
+                Les "variantes" de HTML
+              </h5>
+            <p>HTML, Pug et Haml sont tous des langages de balisage qui permettent de structurer et de donner du sens aux éléments d'une page web. Cependant, ils ont des différences dans leur syntaxe et leur approche.
+                <ul>
+                    <li>HTML est le langage de balisage standard pour représenter les pages web. Il utilise des balises écrites au format < > pour décrire la structure et le contenu de la page web à afficher</li>
+                    <li>Pug, anciennement appelé Jade, est un moteur de templates implémenté en JavaScript qui permet de générer dynamiquement du HTML. Il utilise une syntaxe simplifiée et plus concise que HTML, en utilisant des indentations et des espaces plutôt que des balises</li>
+                    <li>Haml est un autre langage de balisage qui utilise une syntaxe encore plus simplifiée que Pug. Il utilise des indentations et des symboles pour représenter les éléments de la page web, plutôt que des balises</li>
+                </ul>
+                </p>
+                <p>
+                En résumé, HTML, Pug et Haml sont tous des langages de balisage qui permettent de structurer et de donner du sens aux éléments d'une page web. HTML est le langage standard, tandis que Pug et Haml utilisent des syntaxes simplifiées pour faciliter la création de pages web.</p>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer class="section-sm pb-0 border-top border-default">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- IMAGE -->
+          <div class="col-md-3 mb-4">
+            <a class="mb-4 d-block" href="index.html">
+              <img
+                class="img-fluid"
+                width="250px"
+                src="images/post/post-2.jpg"
+                alt="LogBook"
+              />
+            </a>
+          </div>
+
+          <!-- LIENS -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4">
+            <h6 class="mb-4">Liens rapides</h6>
+            <ul class="list-unstyled footer-list">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos</a></li>
+            </ul>
+          </div>
+
+          <!-- ARTICLES -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4">
+            <h6 class="mb-4">Articles</h6>
+            <ul class="list-unstyled footer-list">
+              <li><a href="premier-article-html.html">HTML/CSS</a></li>
+              <li><a href="second-article-bootstrap.html">Bootstrap</a></li>
+              <li><a href="post-elements.html">Article #3</a></li>
+            </ul>
+          </div>
+
+          <!-- ABOUT -->
+          <div class="col-md-3 mb-4">
+            <h6 class="mb-4">À propos</h6>
+            <p>
+              Concepteur de sites web depuis 2016, j'intègre l'équipe du Garage
+              404 en 2020. J'aime apprendre le code aux jeunes et les aider à
+              créer leurs premières pages web !
+            </p>
+          </div>
+        </div>
+        <!-- FLECHE HAUT DE PAGE -->
+        <div class="scroll-top">
+          <a href="javascript:void(0);" id="scrollTop"
+            ><i class="ti-angle-up"></i
+          ></a>
+        </div>
+        <div class="text-center">
+          <!-- COPYRIGHT -->
+          <p class="content">&copy; 2023 - Made By Seb</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS Plugins -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js" async></script>
+    <script src="plugins/slick/slick.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

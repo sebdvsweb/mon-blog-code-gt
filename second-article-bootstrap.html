@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- TITRE DE LA PAGE-->
+    <title>Le Framework Bootstrap</title>
+
+    <!-- MOBILE RESPONSIVE META -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta name="description" content="Blog de Seb" />
+    <meta name="author" content="Seb" />
+
+    <!-- PLUGINS : BOOTSTRAP, SLIDER, ICONS -->
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bbck.woff2"
+      style="font-display: optional"
+    />
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:600%7cOpen&#43;Sans&amp;display=swap"
+      media="screen"
+    />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+
+    <!-- CSS PERSO -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- navigation -->
+    <header class="sticky-top bg-white border-bottom border-default">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-white">
+          <a class="navbar-brand" href="index.html">
+            <img
+              class="img-fluid"
+              width="150px"
+              src="images/logo-simplifie-xs.png"
+              alt="LogBook"
+            />
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navigation"
+          >
+            <i class="ti-menu"></i>
+          </button>
+
+          <div class="collapse navbar-collapse text-center" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">À propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Articles <i class="ti-angle-down ml-1"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="premier-article-html.html"
+                    >HTML/CSS</a
+                  >
+                  <a class="dropdown-item" href="second-article-bootstrap.html"
+                    >Bootstrap</a
+                  >
+                  <a class="dropdown-item" href="post-elements.html"
+                    >Post Elements</a
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <!-- search -->
+            <div class="search px-4">
+              <button id="searchOpen" class="search-btn">
+                <i class="ti-search"></i>
+              </button>
+              <div class="search-wrapper">
+                <form action="javascript:void(0)" class="h-100">
+                  <input
+                    class="search-box pl-4"
+                    id="search-query"
+                    name="s"
+                    type="search"
+                    placeholder="Type &amp; Hit Enter..."
+                  />
+                </form>
+                <button id="searchClose" class="search-close">
+                  <i class="ti-close text-dark"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- /navigation -->
+
+    <section class="section">
+      <div class="container">
+        <article class="row mb-4">
+          <div class="col-lg-10 mx-auto mb-4">
+            <!-- TITRE -->
+            <h1 class="h2 mb-3">Utilisation du framework Bootstrap</h1>
+            <!-- META DONNEES -->
+            <ul class="list-inline post-meta mb-3">
+              <li class="list-inline-item">
+                <i class="ti-user mr-2"></i><b>Seb</b>
+              </li>
+              <li class="list-inline-item">Date : <b>22 juin 2023</b></li>
+            </ul>
+          </div>
+          <!-- IMAGE -->
+          <div class="col-12 mb-3">
+            <div class="post-slider">
+              <img
+                src="images/post/bootstrap-home.jpg"
+                class="img-fluid"
+                alt="Bootstrap"
+              />
+            </div>
+          </div>
+          <div class="col-lg-10 mx-auto" id="quoi">
+            <div class="content">
+              <h4 class="pt-2">C'est quoi Bootstrap ?</h4>
+              <!-- TEXTE -->
+              <p>
+                Bootstrap est une boite à outils indispensable à la création de
+                sites et d'applications web. C'est un
+                <strong>framework</strong> qui offrent des fragments codes HTML,
+                CSS afin de construire en quelques clics des formulaires, des
+                boutons, des barres de navigation, des carousels et d'autres
+                éléments interactifs. On retrouve égalemen des extensions
+                JavaScript pour dynamiser nos pages. Bootstrap s'appuie sur un
+                système de découpage de l'écran en grille ou
+                <strong>grid</strong> en anglais.
+              </p>
+              <p>
+                Le Grid System (Système de grille) est un des concepts les plus
+                importants de Bootstrap. Il nous permet d'organiser et de
+                structurer les différents composants de nos pages web afin
+                qu'elles soient compatibles avec tous types d'appareils de
+                navitation (PC, tablette, smartphone). Le système de grille
+                (Grid System) de Bootstrap s'appuie sur un système de conteneur,
+                de rangées et de 12 colonnes.
+              </p>
+              <hr />
+              <h5 class="pt-2" id="grid">Le système de grille</h5>
+              <div class="row py-3 d-flex align-items-center">
+                <div class="col-lg-6 col-12">
+                  <img
+                    src="images/post/code-a.jpg"
+                    width="100%"
+                    alt="Grid Bootstrap"
+                  />
+                </div>
+                <div class="col-lg-6 col-12">
+                  <p>
+                    Pour utiliser la grid Bootstrap, nous allons avant tout
+                    devoir définir un élément conteneur dans notre page HTML
+                    auquel on passera un attribut class="container" (le
+                    conteneur a alors une taille fixée en pixels) ou
+                    class="container-fluid" (la conteneur a lors une taille de
+                    100% de l'écran).<br />La classe .container va permettre de
+                    définir un conteneur adaptable ou « responsive » de taille
+                    fixe, ce qui signifie que notre conteneur aura toujours la
+                    même taille pour un breakpoint donné et changera de taille à
+                    chaque breakpoint (le breakpoint est la taille d'écran ou
+                    l'on passe d'un type d'affichage à un autre - de PC vers
+                    tablette par exemple).
+                  </p>
+                </div>
+              </div>
+
+              <hr />
+              <h5 class="pt-2">Le système de grille</h5>
+              <div class="row py-3 d-flex align-items-center">
+                <div class="col-lg-6 col-12">
+                  <p class="mt-2">
+                    Dans la grid Bootstrap, les rangées ou <em>row</em> en
+                    anglais doivent absolument être placées dans des conteneurs
+                    et ne sont utilisées que dans le but de servir elles-mêmes
+                    de conteneurs pour les différetes colonnes de la grille.
+                  </p>
+                  <p class="mt-2">
+                    Pour chaque rangée, on va pouvoir définir la taille de nos
+                    blocs en fonction du nombre de colonnes qu'ils vont occuper
+                    par rapport au 12 colonnes disponibles au départ. Un bloc de
+                    6 colonnes utilisera 50% de la place sur la rangée, un bloc
+                    de 4 colonnes 33%, un bloc de 3 colonnes 25%, etc.
+                  </p>
+                  <p>
+                    Pour définir la taille de nos blocs, nous allons utiliser
+                    des class de type .col-* ou * représente le nombre de
+                    colonnes utilisé par un bloc.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <img
+                    src="images/post/bootstrap-basic-grid.png"
+                    width="100%"
+                    alt="Grid Bootstrap"
+                  />
+                </div>
+              </div>
+              <!-- BALISES CODE POUR DES EXEMPLES DE CODE  -->
+              <h5 id="code-and-syntax-highlighting" class="mb-3" id="code">
+                Exemple de code Bootstrap
+              </h5>
+              <div class="highlight">
+                <pre
+                  style="
+                    color: #f8f8f2;
+                    background-color: #272822;
+                    -moz-tab-size: 4;
+                    -o-tab-size: 4;
+                    tab-size: 4;
+                  "
+                ><code class="language-html" data-lang="html"><span style="color:#66d9ef">&lt;div</span> <span style="color:#a6e22e">class="container"</span><span style="color:#66d9ef">&gt;</span><br> <span style="color:#66d9ef">&lt;div</span> <span style="color:#a6e22e">class="row"</span><span style="color:#66d9ef">&gt;</span><br>  <span style="color:#66d9ef">&lt;div</span> <span style="color:#a6e22e">class="col-lg-8"</span><span style="color:#66d9ef">&gt;</span><span style="color:#ffffff">Contenu de ma colonne 1</span><span style="color:#66d9ef">&lt;/div&gt;</span><br>  <span style="color:#66d9ef">&lt;div</span> <span style="color:#a6e22e">class="col-lg-4"</span><span style="color:#66d9ef">&gt;</span><span style="color:#ffffff">Contenu de ma colonne 2</span><span style="color:#66d9ef">&lt;/div&gt;</span><br> <span style="color:#66d9ef">&lt;/div&gt;</span><br><span style="color:#66d9ef">&lt;/div&gt;</span></code></pre>
+              </div>
+              <p class="mt-5">
+                Voici ci-dessous trois colonnes construites avec Bootstrap
+              </p>
+              <h4 class="pt-2">Mise en page en trois colonnes</h4>
+              <div class="row py-3">
+                <div class="col-lg-4 col-12">
+                  <div class="card">
+                    <img
+                      src="./images/post/post-1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Colonne 1</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#quoi" style="border: none">
+                        <button type="button" class="btn btn-outline-warning">
+                          C'est quoi ?
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-12" style="background-color: #f4f4f4">
+                  <div class="card" style="background-color: #f4f4f4">
+                    <div class="card-body">
+                      <h5 class="card-title">Colonne 2</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#grid" style="border: none">
+                        <button type="button" class="btn btn-outline-success">
+                          Une grid ?
+                        </button>
+                      </a>
+                    </div>
+                    <img
+                      src="./images/post/post-2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                  <div class="card">
+                    <img
+                      src="./images/post/post-3.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Colonne 3</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#code" style="border: none">
+                        <button type="button" class="btn btn-outline-light">
+                          Code
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer class="section-sm pb-0 border-top border-default">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- IMAGE -->
+          <div class="col-md-3 mb-4">
+            <a class="mb-4 d-block" href="index.html">
+              <img
+                class="img-fluid"
+                width="250px"
+                src="images/post/post-2.jpg"
+                alt="LogBook"
+              />
+            </a>
+          </div>
+
+          <!-- LIENS -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4">
+            <h6 class="mb-4">Liens rapides</h6>
+            <ul class="list-unstyled footer-list">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">À propos</a></li>
+            </ul>
+          </div>
+
+          <!-- ARTICLES -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4">
+            <h6 class="mb-4">Articles</h6>
+            <ul class="list-unstyled footer-list">
+              <li><a href="premier-article-html.html">HTML/CSS</a></li>
+              <li><a href="second-article-bootstrap.html">Bootstrap</a></li>
+              <li><a href="post-elements.html">Article #3</a></li>
+            </ul>
+          </div>
+
+          <!-- ABOUT -->
+          <div class="col-md-3 mb-4">
+            <h6 class="mb-4">À propos</h6>
+            <p>
+              Concepteur de sites web depuis 2016, j'intègre l'équipe du Garage
+              404 en 2020. J'aime apprendre le code aux jeunes et les aider à
+              créer leurs premières pages web !
+            </p>
+          </div>
+        </div>
+        <!-- FLECHE HAUT DE PAGE -->
+        <div class="scroll-top">
+          <a href="javascript:void(0);" id="scrollTop"
+            ><i class="ti-angle-up"></i
+          ></a>
+        </div>
+        <div class="text-center">
+          <!-- COPYRIGHT -->
+          <p class="content">&copy; 2023 - Made By Seb</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS Plugins -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js" async></script>
+    <script src="plugins/slick/slick.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
